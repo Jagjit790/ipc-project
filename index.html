@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPC Security Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>🔐 IPC Security Dashboard</h1>
+    <p>Efficient and secure communication using Pipes, Queues & Shared Memory</p>
+  </section>
+
+  <div class="container">
+
+    <!-- Input Card -->
+    <div class="card">
+      <h2>Send IPC Message</h2>
+
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+
+      <label>Message</label>
+      <input type="text" id="message" placeholder="Enter your message">
+
+      <label>Method</label>
+      <select id="method">
+        <option value="pipe">Pipe</option>
+        <option value="queue">Message Queue</option>
+        <option value="shared">Shared Memory</option>
+      </select>
+
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- Output -->
+    <div class="card">
+      <h2>System Output</h2>
+      <pre id="output">Your IPC response will appear here...</pre>
+    </div>
+
+   
+
+    <!-- Features -->
+    <div class="grid">
+      <div class="feature">
+        <h3>⚡ Pipes</h3>
+        <p>Fast direct process communication.</p>
+      </div>
+
+      <div class="feature">
+        <h3>📩 Queue</h3>
+        <p>FIFO secure message delivery.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🧠 Shared Memory</h3>
+        <p>High-speed shared storage access.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
